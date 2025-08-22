@@ -6,11 +6,141 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link href="./style.css" rel="stylesheet">
     <title>Personal Website</title>
-
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            background: #f6f9fb;
+        }
+        .hero {
+            background: linear-gradient(120deg, #56dfcf 0%, #a4c8fd 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 70px;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #212529;
+            text-shadow: 0 3px 20px rgba(0,0,0,0.1);
+            margin-bottom: 16px;
+            letter-spacing: 1px;
+            animation: fadein 2s;
+        }
+        @keyframes fadein {
+            from { opacity: 0; transform: translateY(40px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+        .hero p.lead {
+            font-size: 1.6rem;
+            color: #495057;
+        }
+        .hero .btn-info {
+            background: linear-gradient(120deg, #0d6efd 60%, #56dfcf 100%);
+            color: #fff !important;
+            border: none;
+            box-shadow: 0 4px 16px rgba(13,110,253,.1);
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        .hero .btn-info:hover, .btn-success:hover {
+            filter: brightness(1.08);
+        }
+        .resume {
+            margin-top: 0px;
+        }
+        .resume .list-group {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 22px rgba(0,0,0,0.09);
+            padding: 16px;
+        }
+        .resume .list-group-item {
+            border: none !important;
+            font-size: 1.12rem;
+            background: transparent;
+            transition: background 0.2s;
+        }
+        .resume .list-group-item:hover {
+            background: #e2f1ff !important;
+        }
+        .resume label[style*="#EBFFD8"] {
+            font-size: 1.2rem;
+            font-weight: 600;
+            background: #C7FFD8 !important;
+        }
+        .card {
+            border-radius: 18px !important;
+            box-shadow: 0 4px 22px rgba(86, 223, 207, 0.12);
+            border: none !important;
+        }
+        .btn-success {
+            background-color: #02c39a !important;
+            border: none;
+            transition: background 0.2s;
+        }
+        .btn-success:hover {
+            background: #049f83 !important;
+        }
+        .featurette {
+            background: #f8f9fa;
+            border-radius: 24px;
+            box-shadow: 0 2px 14px rgba(86, 223, 207, 0.06);
+            margin: 24px 0;
+            padding: 28px 12px;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .featurette:hover {
+            box-shadow: 0 6px 26px rgba(13,110,253,0.175);
+            transform: translateY(-4px) scale(1.01);
+        }
+        .featurette-divider {
+            border-top: 2px solid #56dfcf;
+            border-radius: 2px;
+            margin: 2.3rem 0;
+        }
+        .marketing ul, .featurette ul {
+            padding-left: 24px;
+        }
+        .marketing li, .featurette li {
+            font-size: 1.11rem;
+        }
+        img {
+            border-radius: 16px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+        }
+        .container {
+            max-width: 1200px !important;
+        }
+        footer {
+            background: linear-gradient(120deg, #ffedf3 0%, #ebffd8 100%);
+            box-shadow: 0 -4px 16px rgba(0,0,0,0.03);
+        }
+        footer ul.nav {
+            margin-bottom: 10px;
+        }
+        footer a {
+            color: #0d6efd !important;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        footer a:hover {
+            color: #02c39a !important;
+        }
+        @media (max-width: 991.98px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .featurette {
+                padding: 16px 4px;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="hero" style="padding-top: 70px;">
-    <div class="px-4 py-5 text-center" style="height: 81vh;">
+<div class="hero">
+    <div class="px-4 py-5 text-center" style="width:100%;">
 
     <h1 class="display-5 fw-bold text-body-emphasis pt-5">
         Welcome to my Website
@@ -24,42 +154,34 @@
         <div class="d-grid gap-3 d-sm-flex justify-content-sm-center" style="margin-top: 80px;">
             <a href="https://www.linkedin.com/in/lokesh-sathish/">
             <button type="button" 
-                    class="btn btn-info btn-lg px-4 gap-3" 
-                    fdprocessedid="y54e2e">
+                    class="btn btn-info btn-lg px-4 gap-3">
                             <img src="./linkedin-svgrepo-com (1).svg" style="height: 20px; margin-bottom: 3px;">
                 LinkedIn
             </button></a>
 
             <a href="https://github.com/Git4Lokesh">
             <button type="button" 
-                    class="btn btn-info btn-lg px-4" 
-                    fdprocessedid="2bxpja">
+                    class="btn btn-info btn-lg px-4">
                         <img src="./github-svgrepo-com.svg" style="height: 20px; margin-bottom: 3px;">
                 <span style="color: black;">Github</span>
             </button></a>
             <a href="https://leetcode.com/u/lokeshsat/">
             <button type="button" 
-                    class="btn btn-info btn-lg px-4" 
-                    fdprocessedid="2bxpja">
+                    class="btn btn-info btn-lg px-4">
                         <img src="./leetcode-svgrepo-com.svg" style="height: 20px; margin-bottom: 3px;">
                 <span style="color: black;">Leetcode</span>
             </button></a>
         </div>
     </div>
 </div>
+</div>
 <div class="resume">
 <div class="d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-lef">
     <div class="list-group list-group-checkable d-grid gap-2 border-0">
-        
-        <!-- First Radio Option -->
-
         <label class="list-group-item rounded-3 py-3" 
                for="listGroupCheckableRadios1" style="background-color: #EBFFD8; text-align: center;">
             College
         </label>
-        
-        <!-- Second Radio Option -->
-
         <label class="list-group-item rounded-3" 
                for="listGroupCheckableRadios2">
             Major in Electronics and Minor in Computer Science
@@ -67,8 +189,6 @@
                 Have strong understanding of core as well as ever important computer science fundamentals
             </span>
         </label>
-        
-
         <label class="list-group-item rounded-3 py-3" 
                for="listGroupCheckableRadios3">
             Extra-Curricular
@@ -78,23 +198,12 @@
                 Member of Chess Club
             </span>
         </label>
-        
-        <!-- Fourth Radio Option (Disabled) -->
-
-        
     </div>
     <div class="list-group list-group-checkable d-grid gap-2 border-0">
-        
-        <!-- First Radio Option -->
-
         <label class="list-group-item rounded-3 py-3" 
                for="listGroupCheckableRadios1" style="background-color: #EBFFD8; text-align: center;">
             Work Experience
-
         </label>
-        
-        <!-- Second Radio Option -->
-
         <label class="list-group-item rounded-3 py-3" 
                for="listGroupCheckableRadios2">
             Finlatics - Machine Learning Intern
@@ -102,8 +211,6 @@
                 Had a 2 weeks training period and then deliverables which were peer assessed. Achieved over 90% accuracy with models.
             </span>
         </label>
-        
-
         <label class="list-group-item rounded-3 py-3" 
                for="listGroupCheckableRadios3">
             TLE Eliminators - Product Management Intern
@@ -112,34 +219,21 @@
                 Eased user onboarding by 50%
             </span>
         </label>
-        
-        <!-- Fourth Radio Option (Disabled) -->
-
-        
     </div>
     <div class="list-group list-group-checkable d-grid gap-2 border-0">
-        
-        <!-- First Radio Option -->
-
         <label class="list-group-item rounded-3 py-3" 
                for="listGroupCheckableRadios1" style="background-color: #EBFFD8; text-align: center;">
             Skills
             <span class="d-block small opacity-50">
             </span>
         </label>
-        
-        <!-- Second Radio Option -->
-
         <label class="list-group-item rounded-3 py-3" 
                for="listGroupCheckableRadios2">
             Areas of Expertise
             <span class="d-block small opacity-50">
                 Knowledgeable in Machine Learning, Operating Systems, OOPS, Artificial Intelligence, Database Management, DSA
-
             </span>
         </label>
-        
-
         <label class="list-group-item rounded-3 py-3" 
                for="listGroupCheckableRadios3">
             Languages
@@ -148,17 +242,12 @@
             Also proficient in PL/SQL and Bootstrap
             </span>
         </label>
-        
-        <!-- Fourth Radio Option (Disabled) -->
-
-</div>
     </div>
+</div>
 <div class="container">
 <div class="card" style="background-color: #56DFCF; border: solid 0px; padding-bottom: 30px;">
-
   <div class="card-body" style="text-align: center;">
     <h5 class="card-title">Interested in my Resume?</h5>
-
     <a href="./Lokesh Sathish Offcampus Resume.pdf" class="btn btn-success">Click Here</a>
   </div>
 </div>
@@ -169,13 +258,8 @@
     <h1 class="display-5 fw-bold mb-3">My Featured Work</h1>
 </div>
     <div class="container marketing">
-    <!-- Three columns of text below the carousel -->
-   
-
-    <!-- START THE FEATURETTES -->
     <hr class="featurette-divider">
 
-    <!-- Featurette 1 -->
     <div class="row featurette">
         <div class="col-md-7">
             <h2 class="featurette-heading fw-normal lh-1">
@@ -205,7 +289,6 @@
 
     <hr class="featurette-divider">
 
-    <!-- Featurette 2 (Reversed Layout) -->
     <div class="row featurette">
         <div class="col-md-7 order-md-2">
             <h2 class="featurette-heading fw-normal lh-1">
@@ -235,7 +318,6 @@
 
     <hr class="featurette-divider">
 
-    <!-- Featurette 3 -->
     <div class="row featurette">
         <div class="col-md-7">
             <h2 class="featurette-heading fw-normal lh-1">
@@ -262,12 +344,9 @@
          height="500">
 </div>
     </div>
-
-
-    <!-- /END THE FEATURETTES -->
+    </div>
 </div>
 <footer class="py-3" style="background-color: #FFEDF3;">
-    <!-- Navigation Links -->
     <ul class="nav justify-content-center border-bottom pb-3 mb-3">
         <li class="nav-item">
             <a href="#" class="nav-link px-2 text-body-secondary">Home</a>
@@ -278,33 +357,12 @@
         <li class="nav-item">
             <a href="#" class="nav-link px-2 text-body-secondary">Phone : +91 9618345152</a>
         </li>
-
     </ul>
     <hr style="width: 90%; margin-left: 70px;"/>
-    <!-- Copyright -->
     <p class="text-center text-body-secondary">
         © Lokesh Sathish
     </p>
 </footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>
 </html>
-
